@@ -1,5 +1,5 @@
 import words from './words.js';
-
+ 
 export const generateRandomWord = (options) => {
     
     const getRandomWord = () => {
@@ -15,7 +15,7 @@ export const generateRandomWord = (options) => {
                 return randomWord.push(words[randomIndex]);
             }
         }
-        return (randomWord ? randomWord : console.log('Words length only between 2 to 22 !'));
+        return (randomWord ? randomWord : Error('WRONG_WORD_LENGTH'));
     };
 
     const getRandomWordMinMax = () => {
