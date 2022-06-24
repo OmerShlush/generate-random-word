@@ -1,3 +1,6 @@
+npm install --save generate-random-word
+
+
 const { generateRandomWord } from 'generate-random-word';
 
 generateRandomWord() -- // returns a generated random word
