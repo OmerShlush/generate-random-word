@@ -28,5 +28,4 @@ const generateRandomWord = (options) => {
     return Error('WRONG_PARAMETERS');
 }
 
-exports.generateRandomWord = generateRandomWord;
- 
+module.exports = generateRandomWord;

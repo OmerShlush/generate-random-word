@@ -58111,4 +58111,4 @@ const words = [
     "zulus",
   ];
   
-  exports.words = words;
+module.exports = words;
