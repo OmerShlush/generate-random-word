@@ -1,38 +1,32 @@
-import words from './words.js';
+const { words } = require('./words');
  
-export const generateRandomWord = (options) => {
-    
+const generateRandomWord = (options) => {
     const getRandomWord = () => {
         return words[Math.floor(Math.random() * words.length)];
     };
-    
     const getRandomWordExact = () => {
-        const word = words[Math.floor(Math.random() * words.length)];
-        const randomWord = [];
-        while(randomWord.length == 0) {
+        let word = words[Math.floor(Math.random() * words.length)];
+        if(options.exact < 2 || options.exact > 22)
+            return Error('WRONG_WORD_LENGTH');
+        while(word.length != options.exact)
             word = words[Math.floor(Math.random() * words.length)];
-            if(word.length == options.exact) {
-                return randomWord.push(words[randomIndex]);
-            }
-        }
-        return (randomWord ? randomWord : Error('WRONG_WORD_LENGTH'));
+        return word;
     };
 
     const getRandomWordMinMax = () => {
-        const word = words[Math.floor(Math.random() * words.length)];
-        const randomWord = [];
-        while(randomWord.length == 0) {
+        let word = words[Math.floor(Math.random() * words.length)];
+        if(options.min < 2 || options.min > 22 || options.max < 2 || options.max > 22)
+            return Error('WRONG_WORD_LENGTH');
+        while(word.length < options.min || word.length > options.max)
             word = words[Math.floor(Math.random() * words.length)];
-            if(word.length >= options.min && words.length <= options.max) {
-                return randomWord.push(words[randomIndex]);
-            }
-        }
-        return (randomWord ? randomWord : console.log('Words length only between 2 to 22 !'));
+        return word;
     };
     
     if(!options) return getRandomWord();
-    if(options.exact) return getRandomWordExact();
     if(options.min && options.max) return getRandomWordMinMax();
+    if(options.exact) return getRandomWordExact();
     return Error('WRONG_PARAMETERS');
 }
+
+exports.generateRandomWord = generateRandomWord;
  

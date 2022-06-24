@@ -1,3 +1,5 @@
+const { generateRandomWord } from 'generate-random-word';
+
 generateRandomWord() -- // returns a generated random word
 
 generateRandomWord({exact: 5}) -- // returns a generated random word by exact length 5
