@@ -1,0 +1,28 @@
+{
+  "name": "generate-random-word",
+  "version": "1.0.0",
+  "description": "Generate random word by length",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmerShlush/generate-random-word.git"
+  },
+  "keywords": [
+    "generate",
+    "random",
+    "word",
+    "rand",
+    "words",
+    "generate-random-word",
+    "random-word"
+  ],
+  "author": "omerdevs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmerShlush/generate-random-word/issues"
+  },
+  "homepage": "https://github.com/OmerShlush/generate-random-word#readme"
+}
