@@ -12,6 +12,10 @@
   },
   "keywords": [
     "generate",
+    "generate-random-word",
+    "generate random word",
+    "random-words",
+    "random-word",
     "random",
     "word",
     "rand",
@@ -24,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/OmerShlush/generate-random-word/issues"
   },
-  "homepage": "https://github.com/OmerShlush/generate-random-word#readme"
+  "homepage": "https://github.com/OmerShlush/generate-random-word#readme",
+  "dependencies": {
+    "generate-random-word": "^1.0.0"
+  }
 }
